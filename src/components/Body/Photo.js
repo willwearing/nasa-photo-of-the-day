@@ -1,9 +1,10 @@
 import React from "react";
 
 export default function Photo(photo) {
+  console.log(photo);
   return (
     <div>
-      <img alt="Nasa Photo of the Day" src={photo.photo}></img>
+      <img src={photo.photo}></img>
     </div>
   );
 }

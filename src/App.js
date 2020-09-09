@@ -20,7 +20,7 @@ function App() {
         console.log("error!", error);
       });
   }, []);
-  console.log(photo);
+
   return (
     <div className="App">
       <Title title={photo.title} />
