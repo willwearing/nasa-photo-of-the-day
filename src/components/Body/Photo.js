@@ -1,11 +1,12 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+const StyledImg = styled.div``;
+
 export default function Photo(photo) {
-  console.log(photo);
   return (
-    <div>
+    <StyledImg>
       <img alt={photo.title} src={photo.photo}></img>
-    </div>
+    </StyledImg>
   );
 }

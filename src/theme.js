@@ -1,10 +1,6 @@
 // theme object here
 export default {
-  primaryColor: "royalBlue",
-  secondaryColor: "crimson",
-  tertiaryColor: "mediumseagreen",
-  white: "white",
   black: "black",
-  paddingSmall: "8px",
+  imgWidth: "80%",
   mobileBreakpoint: "(max-width: 550px)",
 };

@@ -1,11 +1,16 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+const StyledDescription = styled.div`
+  color: ${(pr) => pr.theme.black};
+  width: ${(pr) => pr.theme.imgWidth};
+`;
+
 export default function Description(description) {
-  console.log(description);
+  // console.log(description);
   return (
-    <div>
+    <StyledDescription>
       <p>{description.description}</p>
-    </div>
+    </StyledDescription>
   );
 }

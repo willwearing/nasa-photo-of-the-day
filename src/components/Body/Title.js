@@ -1,10 +1,14 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
+const StyledTitle = styled.div`
+  color: ${(pr) => pr.theme.black};
+`;
+
 export default function Title(title) {
   return (
-    <div>
+    <StyledTitle>
       <h1>{title.title}</h1>
-    </div>
+    </StyledTitle>
   );
 }

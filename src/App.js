@@ -4,6 +4,13 @@ import Title from "./components/Body/Title";
 import Photo from "./components/Body/Photo";
 import Description from "./components/Body/Description";
 import axios from "axios";
+import styled, { keyframes } from "styled-components";
+
+const styledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 function App() {
   const [photo, setPhoto] = useState([]);
@@ -22,11 +29,11 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <styledApp className="App">
       <Title title={photo.title} />
-      <Photo alt="nasa photo of the day" photo={photo.url} />
+      <Photo photo={photo.url} />
       <Description description={photo.explanation} />
-    </div>
+    </styledApp>
   );
 }
 
