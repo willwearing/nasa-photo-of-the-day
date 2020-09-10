@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <Title title={photo.title} />
-      <Photo photo={photo.url} />
+      <Photo alt="nasa photo of the day" photo={photo.url} />
       <Description description={photo.explanation} />
     </div>
   );
