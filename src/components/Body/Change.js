@@ -9,7 +9,6 @@ const StyledChange = styled.button`
   line-height: 160%;
   font-weight: 700;
   cursor: pointer;
-  ax-width: 292px;
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -19,9 +18,15 @@ const StyledChange = styled.button`
   background-color: #000;
 `;
 
-const Change = (props) => {
+const Change = ({ date, setDate }) => {
   return (
-    <StyledChange>Click here to change the Photo of the Day!</StyledChange>
+    <StyledChange
+      onClick={() =>
+        setDate(prompt("Enter the date you want to see:", "YYYY-MM-DD"))
+      }
+    >
+      Click here to change the Photo of the Day!
+    </StyledChange>
   );
 };
 

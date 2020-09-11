@@ -6,7 +6,7 @@ const StyledDate = styled.div`
   &:hover {
     background-color: ${(pr) => pr.theme.otherColor};
   }
-  margin-bottom: 2.5%;
+  margin-bottom: 2%;
 `;
 
 const Date = (props) => {

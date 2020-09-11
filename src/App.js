@@ -26,18 +26,19 @@ function App() {
       .then((response) => {
         const photoData = response.data;
         setPhoto(photoData);
-        console.log(photoData);
       })
       .catch((error) => {
         console.log("error!", error);
+        setDate("1990-02-10");
+        alert("Wrong date entered - Try again!");
       });
-  }, []);
+  }, [date]);
 
   return (
     <StyledApp className="App">
       <Title title={photo.title} />
       <Date date={photo.date} />
-      <Change />
+      <Change date={date} setDate={setDate} />
       <Photo photo={photo.url} />
       <Description description={photo.explanation} />
     </StyledApp>
