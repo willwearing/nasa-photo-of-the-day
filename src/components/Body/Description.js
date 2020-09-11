@@ -11,7 +11,6 @@ const StyledDescription = styled.div`
 `;
 
 export default function Description(description) {
-  // console.log(description);
   return (
     <StyledDescription>
       <p>{description.description}</p>

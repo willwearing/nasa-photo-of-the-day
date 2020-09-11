@@ -1,19 +1,16 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const StyledTitle = styled.div`
+const StyledDate = styled.div`
   color: ${(pr) => pr.theme.black};
   &:hover {
     background-color: ${(pr) => pr.theme.otherColor};
   }
+  margin-bottom: 2.5%;
 `;
 
-const Title = (props) => {
-  return (
-    <StyledTitle>
-      <h1>NASA's Photo of the Day: {props.title}</h1>
-    </StyledTitle>
-  );
+const Date = (props) => {
+  return <StyledDate>Todays Date: {props.date}</StyledDate>;
 };
 
-export default Title;
+export default Date;
