@@ -14,19 +14,22 @@ const styledApp = styled.div`
 
 function App() {
   const [photo, setPhoto] = useState([]);
+  const [date, setDate] = useState("");
 
   useEffect(() => {
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=R1mD9CtnHACs86ovGlEVGQRk2X1FNYtasNPigezx`
+        `https://api.nasa.gov/planetary/apod?api_key=R1mD9CtnHACs86ovGlEVGQRk2X1FNYtasNPigezx&date=${date}`
       )
       .then((response) => {
         setPhoto(response.data);
       })
       .catch((error) => {
         console.log("error!", error);
+        setDate("1990-02-10");
+        alert("Date not recognised - try again!");
       });
-  }, []);
+  }, [date]);
 
   return (
     <styledApp className="App">

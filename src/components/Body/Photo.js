@@ -7,14 +7,14 @@ const rotate = keyframes`
   }
 
   to {
-    transform: rotate(360deg);
+    transform: rotate(30deg);
   }
 `;
 
 const StyledImg = styled.div`
-  &:hover {
+  /* &:hover {
     animation: ${rotate} 2s linear;
-  }
+  } */
 `;
 
 export default function Photo(photo) {

@@ -8,10 +8,13 @@ const StyledTitle = styled.div`
   }
 `;
 
-export default function Title(title) {
+const Title = (props) => {
+  console.log(props);
   return (
     <StyledTitle>
-      <h1>{title.title}</h1>
+      <h1>NASA's Photo of the Day: {props.title}</h1>
     </StyledTitle>
   );
-}
+};
+
+export default Title;
